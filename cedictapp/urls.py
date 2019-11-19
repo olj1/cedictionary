@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import PinyinViewSet, SimplifiedViewSet, TraditionalViewset, EnglishViewset # This library gives us all of the functions usually found in views.py
+from .views import PinyinViewSet, SimplifiedViewSet, TraditionalViewSet, EnglishViewset # This library gives us all of the functions usually found in views.py
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
