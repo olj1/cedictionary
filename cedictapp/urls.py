@@ -3,5 +3,5 @@ from .views import EntriesViewSet # This library gives us all of the functions u
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'', EntriesViewSet, basename='entries')
+router.register(r'', PinyinSimplifiedViewSet, basename='entries')
 urlpatterns = router.urls
