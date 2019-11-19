@@ -10,7 +10,7 @@ class FilteredViewSet(viewsets.ModelViewSet):
         queryset = Entries.objects.all()
         filter_value = self.request.query_params.get('pinyin', None)
         if filter_value is not None:
-            queryset = queryset.filter(pinyin=filter_value
+            queryset = queryset.filter(pinyin=filter_value)
             return queryset
 
 
