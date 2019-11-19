@@ -3,5 +3,5 @@ from .views import FilteredViewSet # This library gives us all of the functions 
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'^(?P<pinyin>\w+)$/', FilteredViewSet, basename='pinyin')
-urlpatterns = router.urls
+router.register(r'', FilteredViewSet, basename='pinyin')
+urlpatterns = patterns('', url(r'^', include(router.urls)))

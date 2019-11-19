@@ -7,7 +7,11 @@ from rest_framework import viewsets
 class FilteredViewSet(viewsets.ModelViewSet):
     serializer_class = EntriesSerializer
     def get_queryset(self):
-        return Entries.objects.filter(pinyin=self.kwargs['pinyin'])
+        queryset = Entries.objects.all()
+        filter_value = self.request.query_params.get('pinyin', None)
+        if filter_value is not None:
+            queryset = queryset.filter(pinyin=filter_value
+            return queryset
 
 
 # class SimplifiedViewSet(viewsets.ModelViewSet):
