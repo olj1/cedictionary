@@ -5,4 +5,4 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'', FilteredViewSet, basename='pinyin')
-urlpatterns = [url(r'^\?pinyin=(?P<pinyin>\w+)', include(router.urls))]
+urlpatterns = [url(r'^', include(router.urls))]
