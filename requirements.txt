@@ -17,7 +17,6 @@ cmudict==0.4.3
 docutils==0.14
 dragonmapper==0.2.6
 editdistance==0.5.3
-English-to-IPA==0.0.1
 epitran==1.4
 flake8==3.5.0
 hanzidentifier==1.0.2
