@@ -12,7 +12,7 @@ djangorestframework==3.10.3
 docutils==0.14
 dragonmapper==0.2.6
 editdistance==0.5.3
-English-to-IPA==0.0.1 -e ./eng_to_ipa/
+-e ./eng_to_ipa/
 epitran==1.4
 flake8==3.5.0
 gunicorn==20.0.0
