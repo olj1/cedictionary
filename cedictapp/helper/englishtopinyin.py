@@ -1,11 +1,10 @@
 import eng_to_ipa as ipa
 import pronouncing
 import itertools
-from cedict_utils_mod.cedict_utils.cedict import CedictParser, CedictEntry
 from dragonmapper import transcriptions
 import re
 
-# english_string = "who" 
+
 test_strings = [
     "rural, fix accumulate, fix yard",
     "birthday",
@@ -133,7 +132,7 @@ def replace_non_compatible_ipa(eng_to_ipa_split_string):
         return stringify.join(compatible_words)
 
 
-ipa_to_ipa_w_x = replace_non_compatible_ipa(convert_english_to_ipa(english_string))
+# ipa_to_ipa_w_x = replace_non_compatible_ipa(convert_english_to_ipa(english_string))
 # print(f"IPA REPLACE H: {ipa_to_ipa_w_x}")
 
 
@@ -320,6 +319,15 @@ def convert_ipa_string_to_pinyin(ipa_string):
         return odds_to_sub
 
 
+def add_pinyin_numbers(list):
+    if list != []:
+        numbers = [num for num in range(1,6)]
+        new_list = [let + str(num) for num in numbers for let in list]
+        print(new_list)
+        return new_list
+    else:
+        return None
 
-convert_ipa_string_to_pinyin(replace_non_compatible_ipa(convert_english_to_ipa(english_string)))
+
+# convert_ipa_string_to_pinyin(replace_non_compatible_ipa(convert_english_to_ipa(english_string)))
 
